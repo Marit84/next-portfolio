@@ -16,17 +16,9 @@ export default class About extends Component {
 
     }
 
-   /*  componentDidMount() {
-        fetch('https://api.github.com/users/marit84')
-        .then(res => res.json())
-        .then(data => {
-            this.setState({
-                user: data
-            });
-        }) */
-    
     render() {
         const { user, statusCode} = this.props;
+       
 
         if (statusCode) {
             return <Error statusCode={statusCode}/>
@@ -35,18 +27,17 @@ export default class About extends Component {
         return (
             <Layout title="About">
           
-            <h3>{user.name}Marit Pedersen</h3>
-            <p className="about-text">I'm a JavaScript Junior with a background from Graphic Design. I love to make things in general, and are now working on improving my JavaScript skills.</p>
-            <img src="/static/javascript-logo.jpg" alt="JavaScript" height="200px"/>
+            <h3>{user.name}</h3>
+            <p className="about-text">{user.bio}</p>
+            <img src={user.avatar_url} alt="JavaScript" height="200px"/>
 
             <style jsx>{`
 .about-text {
-  width: 30rem;
+  width: 28rem;
   text-align: center;
 }
 `}</style>
         </Layout>
 
         );
-
         }}

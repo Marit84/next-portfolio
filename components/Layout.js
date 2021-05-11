@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import { useLayoutEffect } from 'react';
 
 Router.onRouteChangeStart = url => {
     console.log(url);
@@ -21,7 +20,7 @@ const Layout = ({ children, title }) => (
         <header>
             <Link  href="/">
             <a>Home</a></Link>
-            <Link  href="about/">
+            <Link  href="/about">
             <a>About</a></Link>
             <Link  href="/hireme">
             <a>Hire Me</a></Link>
@@ -41,7 +40,6 @@ const Layout = ({ children, title }) => (
     align-items: center;
     flex-direction: column;
 }
-
 header {
     width: 100%;
     display: flex;
@@ -50,21 +48,17 @@ header {
     font-size: 1.2rem;
     background: teal;
 }
-
 header a {
     color: darkgrey;
     text-decoration: none;
 }
-
 header a:hover {
     font-weight: bold;
     color: lightgrey;
 }
-
 footer {
     padding: 1em;
 }
-
 `}</style> 
 
 <style global jsx>{`

@@ -5,8 +5,8 @@ render() {
     return (
         <Html lang="en">
             <Head>
+                <meta charset="utf-8" />
                 <meta name="description" content="A site for my programming portfolio" />
-                <meta charset="utf8" />
                 <meta name="robots" content="noindex, nofollow" />
                 <meta name="viewport" content="width=device-width" />
 
@@ -24,9 +24,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 `}</style>
-            
         </Html>
-
     )
-}
+  }   
 }

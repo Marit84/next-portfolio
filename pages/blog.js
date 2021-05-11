@@ -6,6 +6,15 @@ const PostLink = ({ slug, title }) => (
     <Link as={`/${slug}`} href={`/post?title=${title}`}>
     <a>{title}</a>
     </Link>
+    <style jsx>{`
+a {
+  text-decoration: none;
+  color: darkslategrey;
+}
+a:hover {
+    color: darkgrey;
+}
+`}</style>
 </li>
 );
 
